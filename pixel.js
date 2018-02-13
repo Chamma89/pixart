@@ -15,7 +15,7 @@ for(var i = 0; i < 100; i++){
 	$('body').append('<div class="square">Hello</div>');  
 }
 
-$('.square').on('click', function(){
+$('.square').on('mouseover', function(){
 	$(this).css("background-color", $("input").val())
 	console.log("Test");
 })
