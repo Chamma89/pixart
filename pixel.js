@@ -12,6 +12,10 @@ $('input').on('keypress', function(e) {
 });
 
 for(var i = 0; i < 100; i++){
-
 	$('body').append('<div class="square">Hello</div>');  
 }
+
+$('.square').on('click', function(){
+	$(this).css("background-color", "green")
+	console.log("Test");
+})
