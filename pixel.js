@@ -16,6 +16,7 @@ for(var i = 0; i < 100; i++){
 }
 
 $('.square').on('click', function(){
-	$(this).css("background-color", "green")
+	$(this).css("background-color", $("input").val())
 	console.log("Test");
 })
+
