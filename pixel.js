@@ -17,6 +17,23 @@ for(var i = 0; i < 100; i++){
 
 $('.square').on('mouseover', function(){
 	$(this).css("background-color", $("input").val())
-	console.log("Test");
 })
 
+	
+
+	// OMDB Section	
+$('.movieButton').on('click',function(){
+	$inputValue = $('.movieInput').val()
+	var options = {
+		url: 'http://www.omdbapi.com/?apikey=2f6435d9&s=' + $inputValue
+	};
+
+	
+	$.ajax(options).done(function(response){	
+			
+	   response.Search.forEach(function(movie){
+			
+			$( ".container" ).append('<img src= ' + movie.Poster + '>');
+			})
+	})
+})
