@@ -10,3 +10,8 @@ $('input').on('keypress', function(e) {
         $(".brushBox").css("background-color", $('input').val());
     }
 });
+
+for(var i = 0; i < 100; i++){
+
+	$('body').append('<div class="square">Hello</div>');  
+}
